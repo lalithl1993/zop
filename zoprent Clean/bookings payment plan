@@ -1,6 +1,6 @@
-pages flow : bookins.php -> checkout page -> svr page -> thank you page
+bookins.php -> checkout page -> svr page -> thank you page
 
-#bookings.php (existing page)
+bookings.php
 	- remove booking id generation
 	- session used:
 					user_id
@@ -16,27 +16,29 @@ pages flow : bookins.php -> checkout page -> svr page -> thank you page
 				amount to be paid				(to be added in form hidden field)
 				user_id							(to be added in form hidden field from session)
 				sub_category					(to be added in form hidden field)
+				city							(not sure)
 				
-#checkout page					(new, rip from onn bikes)
+checkout page					(rip from onn bikes)
 	- display product details 
 	- pay buttion
 	- razor pay checkout popup
+	- pass dynamic form data on payment success			(to be implimented)
 	
-#svr page						(new, rip from onn bikes)
-	- get payid from GET
+svr page						(rip from onn bikes)
+	- get payid from (GET/POST)
 	- capture payment
-	- booling_id generation		(rip from bookings.php)
+	- booking_id generation		(rip from bookings.php)
 	- database entry 			(rip from bookings.php)
 	- sms						(rip from bookings.php)
 	- mail						(rip from bookings.php)
 	- redirect to thank you page
 
-#thank you page    (new or existing)
+thank you page
 	- thank you message
 	
 	
 
-Database changes:(should discuess more)
+Database changes:
 extra:
 		booking_details table - 
 						status:	
